@@ -126,7 +126,7 @@ def hello(args, book: AddressBook):
 
 commands = {
     "add [Name] [Number]": "add a name with number to Address Book, for example: add Alex 0111222333",
-    "add-birthday [Name] [DD.MM.YYYY]": "Add or update birthday for contact. If contact doesn't exit, it "
+    "add-birthday [Name] [DD.MM.YYYY]": "add or update birthday for contact. If contact doesn't exit, it "
                                         "creates a new one, for example: add-birthday Alex 21.03.2024",
     "all": "display all records in contacts",
     "birthdays": "display contacts with birthdays in the next 7 days",
