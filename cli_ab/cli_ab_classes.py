@@ -1,4 +1,4 @@
-# Module 7 Homework
+# Module 8 Homework
 # THis module defines the classes and methods used in the Address Book CLI Bot.
 
 from collections import UserDict
@@ -88,8 +88,10 @@ class Record:
         self.remove_phone(old_phone)
 
     def __str__(self):
-        return (f"Contact name: {str(self.name)}, phone(s): {', '.join(str(p) for p in self.phones)}, "
-                f"birthday: {str(self.birthday)} ")
+        return f'{str(self.name):19} {", ".join(str(p) for p in self.phones):<36} {str(self.birthday):<}'
+
+        # return (f"Contact name: {str(self.name)}, \tphone number(s): {', '.join(str(p) for p in self.phones)}, "
+        #         f"\tbirthday: {str(self.birthday)} ")
 
 
 class AddressBook(UserDict):
@@ -103,7 +105,8 @@ class AddressBook(UserDict):
         self.data.pop(name)
 
     def __str__(self):
-        return "\n".join(str(record) for record in self.data.values())
+        header_row = f'{"Contact name":20}{"Phone number(s)":37}{"Birthday"}\n{"-" * 72}\n'
+        return header_row + "\n".join(str(record) for record in self.data.values()) + "\n"
 
 #
 # # Створення нової адресної книги
