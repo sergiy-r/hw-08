@@ -125,9 +125,9 @@ def hello(args, book: AddressBook):
 
 
 commands = {
-    "add [Name] [Number]": "add a name with number to contacts, for example: add Alex 0111222333",
-    "add-birthday [Name] [DD.MM.YYYY]": "Add or update the birthday for a contact, for example: "
-                                        "add-birthday Alex 21.03.2024",
+    "add [Name] [Number]": "add a name with number to Address Book, for example: add Alex 0111222333",
+    "add-birthday [Name] [DD.MM.YYYY]": "Add or update birthday for contact. If contact doesn't exit, it "
+                                        "creates a new one, for example: add-birthday Alex 21.03.2024",
     "all": "display all records in contacts",
     "birthdays": "display contacts with birthdays in the next 7 days",
     "close": "exit the program",
@@ -141,7 +141,9 @@ commands = {
 
 
 def help(args, book: AddressBook):
-    print(f"\n".join(f"{Fore.BLUE} {key:40} {Fore.RESET} {value}" for key, value in commands.items()))
+    help_header = "\nThe bot accepts the following commands:\n"
+    help_text = f"\n".join(f"{Fore.BLUE} {key:40} {Fore.RESET} {value}" for key, value in commands.items())
+    return help_header + help_text + "\n"
 
 
 @input_error
