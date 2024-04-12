@@ -159,14 +159,14 @@ commands = {
                                         "creates a new one, for example: add-birthday Alex 21.03.2024",
     "all": "display all records in contacts",
     "birthdays": "display contacts with birthdays in the next 7 days",
-    "close": "exit the program",
+    "close": "exit the program and save changes",
     "change [Name] [Old Number] [New Number]": "change the phone number for a contact, for example: "
                                                "change Alex 0111222333 0222333444",
-    "exit": "exit the program",
+    "exit": "exit the program and save changes",
     "hello": "greet the bot",
     "phone [Name]": "display the phone number for a contact, for example: phone Alex",
     "quit": "exit without saving changes",
-    "save": "save Address Book to file",
+    "save": "save changes",
     "show-birthday [Name]": "display the birthday for a contact, for example: show-birthday Alex"
 }
 
